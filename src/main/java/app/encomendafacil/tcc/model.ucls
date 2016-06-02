@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="app.encomendafacil.tcc.entity.Encomenda" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/entity/Encomenda.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="144" x="988" y="302"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="app.encomendafacil.tcc.entity.Usuario" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/entity/Usuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="148" width="137" x="266" y="302"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="app.encomendafacil.tcc.service.ws.EncomendaRestWS" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/service/ws/EncomendaRestWS.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="281" x="660" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="app.encomendafacil.tcc.service.ws.UsuarioRestWS" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/service/ws/UsuarioRestWS.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="185" x="154" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="app.encomendafacil.tcc.service.UsuarioService" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/service/UsuarioService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="185" x="41" y="302"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="app.encomendafacil.tcc.service.EncomendaService" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/service/EncomendaService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="288" x="660" y="302"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="app.encomendafacil.tcc.crawler.CorreioCrawler" project="EncomendaFacilTCC" 
+    file="/EncomendaFacilTCC/src/main/java/app/encomendafacil/tcc/crawler/CorreioCrawler.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="167" x="443" y="302"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="8">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="9">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="10">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="11" name="INSTANCE"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

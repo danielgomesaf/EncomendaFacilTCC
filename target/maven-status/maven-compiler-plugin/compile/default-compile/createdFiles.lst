@@ -1,0 +1,6 @@
+app\encomendafacil\tcc\entity\Encomenda.class
+app\encomendafacil\tcc\service\UsuarioService.class
+app\encomendafacil\tcc\service\ws\UsuarioRestWS.class
+app\encomendafacil\tcc\service\EncomendaService.class
+app\encomendafacil\tcc\service\ws\EncomendaRestWS.class
+app\encomendafacil\tcc\entity\Usuario.class
