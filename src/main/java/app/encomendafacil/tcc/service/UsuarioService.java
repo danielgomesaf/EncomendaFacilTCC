@@ -32,6 +32,7 @@ public class UsuarioService {
 				usuario.setIdUsuario(rs.getString("idUsuario"));
 				usuario.setNome(rs.getString("nome"));
 				usuario.setSenha(rs.getString("senha"));
+				usuario.setTokenId(rs.getString("tokenId"));
 				return usuario;
 			}
 		} catch (SQLException e) {
@@ -80,10 +81,11 @@ public class UsuarioService {
 	public void updateUsuario(Usuario usuario) {
 		PreparedStatement ps = null;
 		try {
-			ps = conn.prepareStatement("UPDATE usuario SET email = ?, nome = ? WHERE idUsuario = ?");
+			ps = conn.prepareStatement("UPDATE usuario SET email = ?, nome = ?, senha=? WHERE idUsuario = ?");
 			ps.setString(1, usuario.getEmail());
 			ps.setString(2, usuario.getNome());
-			ps.setString(3, usuario.getIdUsuario());
+			ps.setString(3, usuario.getSenha());
+			ps.setString(4, usuario.getIdUsuario());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -98,12 +100,12 @@ public class UsuarioService {
 		}
 	}
 	
-	public void updateTokenId(String tokenId, String idUsuario) {
+	public void updateTokenId(Usuario usuario) {
 		PreparedStatement ps = null;
 		try {
 			ps = conn.prepareStatement("UPDATE usuario SET tokenId = ? WHERE idUsuario = ?");
-			ps.setString(1, tokenId);
-			ps.setString(2, idUsuario);
+			ps.setString(1, usuario.getTokenId());
+			ps.setString(2, usuario.getIdUsuario());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

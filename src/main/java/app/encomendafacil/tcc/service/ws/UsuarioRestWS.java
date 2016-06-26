@@ -31,21 +31,36 @@ public class UsuarioRestWS {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("add")
-	public void addUsuario(Usuario usuario) {
-		ServiceFactory.getUsuarioService().addUsuario(usuario);
+	public String addUsuario(Usuario usuario) {
+		try {
+			ServiceFactory.getUsuarioService().addUsuario(usuario);
+			return "sucesso";
+		} catch (RuntimeException e) {
+			return "erro";
+		}
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("update")
-	public void updateUsuario(Usuario usuario) {
-		ServiceFactory.getUsuarioService().addUsuario(usuario);
+	public String updateUsuario(Usuario usuario) {
+		try {
+			ServiceFactory.getUsuarioService().updateUsuario(usuario);
+			return "sucesso";
+		} catch (RuntimeException e) {
+			return "erro";
+		}
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("updateTokenId/{tokenId}/{idUsuario}")
-	public void updateTokenId(@NotNull @PathParam("tokenId") String tokenId,@NotNull @PathParam("idUsuario") String idUsuario) {
-		ServiceFactory.getUsuarioService().updateTokenId(tokenId, idUsuario);
+	@Path("updateTokenId")
+	public String updateTokenId(Usuario usuario) {
+		try {
+			ServiceFactory.getUsuarioService().updateTokenId(usuario);
+			return "sucesso";
+		} catch (Exception e) {
+			return "erro";
+		}
 	}
 }
